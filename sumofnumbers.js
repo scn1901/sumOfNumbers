@@ -27,12 +27,12 @@ function sumRecursion(nums){
   if (nums.length === 0){
     return 0;
   } else {
-    return nums[0] + sumRecursive(nums.slice(1));
+    return nums[0] + sumRecursion(nums.slice(1));
   }
 }
 
 function sumTheSimpleWay(nums){
-  return _.reduce(nums);
+  return _.reduce(nums, function(memo, num){ return memo + num });
 }
 
 const nums = [1,2,3,4,5];
